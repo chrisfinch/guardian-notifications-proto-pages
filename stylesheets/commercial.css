@@ -1,0 +1,439 @@
+/* ==========================================================================
+   Variables and mixins
+   ========================================================================== */
+.commercial {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+  color: #333333;
+  background-color: #f8f8f4;
+  width: 100%;
+  position: relative;
+}
+
+.commercial__head {
+  background-color: #edede7;
+  overflow: hidden;
+  height: 40px;
+  height: 4rem;
+}
+
+.commercial__title {
+  color: #214583;
+  text-transform: lowercase;
+  word-spacing: -0.25em;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  font-family: "EgyptianHeadline", georgia, serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 8px;
+  float: left;
+}
+.commercial__title .em {
+  font-style: italic;
+}
+
+.commercial__subtitle {
+  color: #fff;
+  font-family: "EgyptianHeadline", georgia, serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 12px;
+  line-height: 1.2rem;
+  margin: 0;
+  position: absolute;
+  bottom: 4px;
+  padding: 4px 8px;
+}
+
+.commercial__body {
+  padding: 8px;
+  overflow: hidden;
+}
+
+.commercial__foot {
+  border-top: 1px dotted #e3e3db;
+  padding: 4px;
+  margin: 0 4px;
+  clear: both;
+}
+
+.commercial__link {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  font-family: "AgateSans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.commercial__link .i {
+  position: relative;
+  top: 2px;
+  margin-left: 4px;
+}
+.commercial__head .commercial__link {
+  line-height: 32px;
+  line-height: 3.2rem;
+  padding: 4px;
+  display: block;
+  float: right;
+}
+.commercial__head .commercial__link .i {
+  background-color: #005689;
+  background-position: 9px 9px;
+  border-radius: 100%;
+  margin-left: 4px;
+  top: 0;
+  width: 32px;
+  width: 3.2rem;
+  height: 32px;
+  height: 3.2rem;
+  float: right;
+}
+
+.commercial__label {
+  display: block;
+}
+
+/* ==========================================================================
+   Entries
+   ========================================================================== */
+.lineitems {
+  list-style-type: none;
+  margin: 0;
+}
+
+.lineitem__title {
+  font-family: "EgyptianHeadline", georgia, serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
+.lineitem__title a {
+  color: #333333;
+}
+
+.lineitem__description,
+.lineitem__link {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  font-family: "AgateSans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.lineitem__description strong,
+.lineitem__link strong {
+  color: #000;
+  font-weight: normal;
+}
+
+.lineitem__link {
+  margin-top: 4px;
+}
+.lineitem__link .i.i-single-arrow-right-blue {
+  background-position: 6px 4px;
+  border: 1px solid #005689;
+  border-radius: 100%;
+  margin-right: 4px;
+  padding: 4px;
+  width: 8px;
+  width: 0.8rem;
+  height: 8px;
+  height: 0.8rem;
+  float: left;
+}
+
+.lineitem__blocklink:hover {
+  text-decoration: none;
+}
+.lineitem__blocklink:hover .lineitem__title {
+  text-decoration: underline;
+}
+
+.lineitem__meta {
+  color: #767676;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 14px;
+  line-height: 1.4rem;
+  font-family: "AgateSans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+.lineitem__image {
+  max-width: 100%;
+  outline: 1px solid #f4f4ee;
+}
+
+/* ==========================================================================
+   300x50 varient
+   ========================================================================== */
+@media all and (max-width: 46.24em) {
+  .commercial__head {
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 5rem;
+    overflow: hidden;
+  }
+
+  .commercial__title {
+    padding: 4px;
+  }
+  .commercial__title .i {
+    margin-top: 4px;
+  }
+
+  .commercial__subtitle {
+    padding: 4px;
+  }
+
+  .commercial__title a {
+    color: #fff;
+  }
+
+  .commercial__body,
+  .commercial__foot {
+    display: none;
+  }
+}
+@media all and (min-width: 46.25em) {
+  .commercial__subtitle {
+    display: none;
+  }
+}
+/* ==========================================================================
+   Masterclass component
+   ========================================================================== */
+.masterclasses-component .commercial__title .em {
+  color: #951C55;
+}
+.masterclasses-component .lineitem__image {
+  margin-right: 4px;
+  outline: 1px solid #f4f4ee;
+  float: left;
+}
+.masterclasses-component .lineitem__link {
+  display: block;
+}
+.masterclasses-component .lineitem__description {
+  margin-top: 4px;
+}
+@media all and (max-width: 46.24em) {
+  .masterclasses-component .commercial__head {
+    background-color: #951C55;
+  }
+  .masterclasses-component .commercial__head .commercial__title .em {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* ==========================================================================
+   Travel component
+   ========================================================================== */
+.travel-component .lineitem {
+  border-bottom: 1px solid #f8f8f4;
+  position: relative;
+}
+.travel-component .lineitem__offer {
+  text-shadow: 0 0 2px #333333;
+  background-color: #333333;
+  background: -moz-linear-gradient(top, rgba(51, 51, 51, 0) 0%, #333333 66%);
+  background: -webkit-linear-gradient(top, rgba(51, 51, 51, 0) 0%, #333333 66%);
+  background: -ms-linear-gradient(top, rgba(51, 51, 51, 0) 0%, #333333 66%);
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, #333333 66%);
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.travel-component .lineitem__image {
+  width: 100%;
+  display: block;
+}
+.travel-component .lineitem__title {
+  color: #fff;
+  font-weight: bold;
+}
+.travel-component .lineitem__meta {
+  color: #64C5F8;
+}
+.travel-component .commercial__body {
+  padding: 0;
+}
+.travel-component .commercial__foot {
+  background-color: #333333;
+  margin: 0;
+  border: 0 none;
+}
+.travel-component .commercial__link {
+  color: #fff;
+}
+.travel-component .commercial__search {
+  margin-bottom: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.travel-component .commercial__search .i.i-search-grey {
+  background-position: 6px 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+}
+.travel-component .commercial__search .text-input {
+  padding: 4px;
+  padding-left: 2em;
+  width: 70%;
+  height: 32px;
+  float: left;
+  overflow: hidden;
+}
+.travel-component .commercial__search .submit-input {
+  background-color: #37B0EB;
+  margin: 0;
+  min-width: 0;
+  padding: 0.9rem 0;
+  width: 30%;
+  float: left;
+}
+@media all and (max-width: 46.24em) {
+  .travel-component .commercial__head {
+    background-color: #BBDFF6;
+  }
+  .travel-component .commercial__subtitle {
+    color: #214583;
+  }
+}
+
+/* ==========================================================================
+   Jobs component
+   ========================================================================== */
+.jobs-component .lineitem__image-logo {
+  margin-left: 4px;
+  width: 100px;
+  width: 10rem;
+  height: 40px;
+  height: 4rem;
+  float: right;
+}
+.jobs-component .lineitem__description {
+  margin-top: 16px;
+}
+.jobs-component .lineitem__list {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 16px;
+  line-height: 1.6rem;
+  margin: 16px 0;
+}
+@media all and (max-width: 46.24em) {
+  .jobs-component .commercial__head {
+    background-color: #08417b;
+  }
+  .jobs-component .commercial__head .commercial__title .em {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* ==========================================================================
+   Soulmates component
+   ========================================================================== */
+.soulmates-component {
+  background-color: #F4F8FD;
+  /* Entries */
+}
+.soulmates-component .commercial__head {
+  background-color: #DEEBF9;
+  position: relative;
+  overflow: hidden;
+  clear: both;
+}
+.soulmates-component .commercial__subtitle {
+  color: #767676;
+}
+.soulmates-component .commercial__body {
+  padding: 8px;
+}
+.soulmates-component .lineitem {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+.soulmates-component .lineitem__title {
+  color: #1A1570;
+  font-size: 1.3rem;
+  line-height: 1.5385;
+  font-weight: bold;
+  margin-top: 4px;
+}
+.soulmates-component .lineitem__title:hover {
+  text-decoration: underline;
+}
+.soulmates-component .lineitem__meta strong {
+  color: #333333;
+  font-weight: normal;
+}
+.soulmates-component .lineitem__image {
+  padding: 4px;
+  background-color: #fff;
+  outline: 0 none;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+.soulmates-component .lineitem__blocklink {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+.soulmates-component .lineitem__blocklink::before {
+  content: " ";
+  background-color: #D80457;
+  margin-left: -44px;
+  padding: 1px;
+  width: 88px;
+  height: 108px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.soulmates-component .lineitem:nth-child(2n) .lineitem__blocklink::before {
+  background-color: #5994DD;
+}
+.soulmates-component .lineitem:nth-child(3n) .lineitem__blocklink::before {
+  background-color: #039763;
+}
+@media all and (max-width: 46.24em) {
+  .soulmates-component .commercial__head {
+    background-color: #fff;
+  }
+}
+@media all and (min-width: 46.25em) {
+  .soulmates-component .commercial__title {
+    padding-top: 4px;
+  }
+  .soulmates-component .commercial__subtitle {
+    display: block;
+    bottom: 0;
+  }
+}
